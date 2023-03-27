@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+    margin-left: 0 auto;
+    margin-bottom: 0 auto;
+    margin-right: 0 auto;
+    margin-top: 0 auto;
+}
+html,body{
+    font-size: 16px;
+}
+:root {
+    --gray-color:#F1EFFE;
+    --dark-gray: rgba(12, 13, 31, 0.5)
+}
+.conteiner{
+    width: 960px;
+    margin: 0 auto;
+}
+.portfolioman{
+    display :grid;
+    width: 53.75rem;
+    height: auto;
+    grid-template-columns: 16rem 1fr 1fr;
+    grid-template-areas: 
+    "photo about about"
+    "photo goals frustrations";
+   margin-top: 5rem;
+   margin-bottom: 2.5rem;
+}
+h1{
+    margin-top: 0;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+}
+section1{
+
+    grid-area: photo;
+    /* margin-right: 2.5rem; */
+}
+section2{
+    grid-area: about;
+    margin-bottom: 2rem;
+
+}
+section3{
+    grid-area: goals;
+    margin-right: 4.25rem;
+}
+section4{
+    grid-area: frustrations;
+}
+.information{
+    display: flex;
+    padding-top: 5px;
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+}
+.information , ul{
+    background-color: var(--gray-color);
+    border-radius: 12px;
+    
+}
+.information p{
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-top:0;
+    margin-bottom: 0;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+}
+.information ul{
+    padding-left: 24px;
+}
+.information ul li{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-right: 24px;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: var(--dark-gray);
+}
+.about , .goals , .frustrations{
+    /* border: 1px solid red; */
+}
+section3 ul,section4 ul{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+padding-left: 2.5rem;
+padding-bottom:0.5rem;
+padding-top: 0.5rem;
+margin-bottom: 0rem;
+}
+section3 li,section4 li{
+    width: 11.0625rem;
+    margin-bottom: 0.5rem;
+}
+section3 ul{
+    list-style: square url("../img/okey.png") outside;
+}
+section4 ul{
+    list-style: square url("../img/cancel.png") outside;
+}
+.portfoliowomen{
+    display :grid;
+    width: 53.75rem;
+    height: auto;
+    grid-template-columns: 16rem 1fr 1fr;
+    grid-template-areas: 
+    "photo about about"
+    "photo goals frustrations";
+   
+   margin-bottom: 2.5rem;
+}
+@media (max-width:820px){
+    .conteiner{
+        margin-left: 1rem;
+    }
+    .portfolioman{
+        width: 48.75rem;
+        grid-template-columns: 1fr 16rem 1fr;
+        grid-template-areas: 
+        ". photo ."
+        "about about about"
+        "goals . frustrations";
+    }
+    .portfoliowomen{
+        width: 48.75rem;
+        grid-template-columns: 1fr 16rem 1fr;
+        grid-template-areas: 
+        ". photo ."
+        "about about about"
+        "goals . frustrations";
+    }
+}
